@@ -81,13 +81,13 @@ func findLargestProduct(grid [][]int, adjLen int) Adjacent {
 					adjs[1].members = append(adjs[1].members, grid[i+k][j])
 				}
 
-				// left diagnol
+				// left diagonal
 				if i+adjLen-1 < rows && j-adjLen-1 > -1 {
 					adjs[2].sum *= grid[i+k][j-k]
 					adjs[2].members = append(adjs[2].members, grid[i+k][j-k])
 				}
 
-				// right diagnoal
+				// right diagonal
 				if i+adjLen-1 < rows && j+adjLen-1 < cols {
 					adjs[3].sum *= grid[i+k][j+k]
 					adjs[3].members = append(adjs[3].members, grid[i+k][j+k])
